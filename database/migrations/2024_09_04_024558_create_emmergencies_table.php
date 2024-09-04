@@ -16,8 +16,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('phone');
             $table->text('address');
+            $table->foreignId('user_id');
             $table->string('relationship');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
