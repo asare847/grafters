@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('compentencies', function (Blueprint $table) {
             $table->id();
-            $table->string('ticket_name');
-            $table->string('ticket_number');
+            $table->string('card_name');
+            $table->string('card_number');
             $table->timestamps();
         });
     }
