@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('card_name');
             $table->string('card_number');
+            $table->foreignId('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

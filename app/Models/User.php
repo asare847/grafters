@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Emmergency;
+use App\Models\Competency;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
@@ -47,5 +48,9 @@ class User extends Authenticatable
 
     public function emmergency(){
         return $this->hasOne(Emmergency::class);
+    }
+
+    public function competency(){
+        return $this->hasMany(Competency::class);
     }
 }
