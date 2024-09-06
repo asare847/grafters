@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('compentencies', function (Blueprint $table) {
+        Schema::create('competencies', function (Blueprint $table) {
             $table->id();
             $table->string('card_name');
             $table->string('card_number');
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('compentencies');
+        Schema::dropIfExists('competencies');
     }
 };
